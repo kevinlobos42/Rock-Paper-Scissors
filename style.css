@@ -1,0 +1,167 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Montserrat", sans-serif;
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+}
+.container {
+  max-width: 900px;
+  margin: auto;
+}
+header {
+  margin: auto;
+  padding-top: 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+header .title {
+  font-size: 3rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+header #restart-btn {
+  padding: 0.5rem 1rem;
+  font-size: 1.2rem;
+  outline: none;
+  border: none;
+  background: #006eff;
+  color: white;
+  margin-bottom: 2rem;
+  transition: all 0.2s;
+}
+header #restart-btn:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+header .scores {
+  display: flex;
+  font-size: 1.4rem;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+#player-score {
+  background: #006eff;
+  color: white;
+  display: block;
+  width: 50%;
+  text-align: center;
+  padding: 0.5rem;
+  border-radius: 12px 0 0 12px;
+}
+#computer-score {
+  background: #000;
+  color: white;
+  display: block;
+  width: 50%;
+  text-align: center;
+  padding: 0.5rem;
+  border-radius: 0 12px 12px 0;
+}
+.game-icons {
+  margin: auto;
+  margin-top: 1rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+}
+.choice {
+  transition: all 0.2s;
+  font-size: 1.5rem;
+}
+.choice:hover {
+  color: #006eff;
+  cursor: pointer;
+}
+.choice p {
+  margin-top: 0.5rem;
+  transform: translateX(10%);
+}
+.modal {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(61, 61, 61, 0.6);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  display: none;
+}
+.modal-content {
+  text-align: center;
+  padding: 3rem 0;
+  width: 400px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0px 4px 10px #333, 0px -4px 10px #333;
+}
+.modal-content > * {
+  line-height: 1.4;
+}
+.modal-content p {
+  font-size: 1.2rem;
+}
+#win {
+  color: rgb(89, 255, 47);
+}
+#lose {
+  color: red;
+}
+@media screen and (max-width: 768px) {
+  body {
+    width: 100vw;
+  }
+  .container {
+    max-width: 600px;
+  }
+  .icon {
+    font-size: 10rem;
+  }
+}
+@media screen and (max-width: 450px) {
+  .container {
+    max-width: 320px;
+  }
+  .icon {
+    font-size: 6rem;
+  }
+  .modal-content {
+    width: 300px;
+  }
+}
+@media screen and (max-width: 321px) {
+  header .title {
+    font-size: 2rem;
+  }
+  header #restart-btn {
+    font-size: 1rem;
+  }
+  #player-score {
+    font-size: 1rem;
+  }
+  #computer-score {
+    font-size: 1rem;
+  }
+  .container {
+    max-width: 250px;
+  }
+  .icon {
+    font-size: 4rem;
+  }
+  .choice p {
+    font-size: 1rem;
+  }
+}
