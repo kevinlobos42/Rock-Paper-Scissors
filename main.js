@@ -11,7 +11,7 @@ const scores = {
 
 function play(e) {
   console.log(modalContent.offsetTop);
-  window.scrollTo({ top: window.innerHeight / 3, behavior: "smooth" });
+  window.scrollTo({ top: window.innerHeight / 2.5, behavior: "smooth" });
   const playerChoice = e.target.id;
   const compChoice = getCompChoice();
   const winner = getWinner(playerChoice, compChoice);
