@@ -3,18 +3,15 @@ const playerScore = document.querySelector("#player-score");
 const compScore = document.querySelector("#computer-score");
 const restart = document.getElementById("restart-btn");
 const modal = document.querySelector(".modal");
-const modalContent = document.querySelector(".modal-content");
+const modalContent = document.querySelector("#modal-content");
 const scores = {
   player: 0,
   comp: 0
 };
 
 function play(e) {
-  document.body.scrollTo({
-    x: 0,
-    y: 0,
-    behavior: "smooth"
-  });
+  console.log(modalContent.offsetTop);
+  window.scrollTo({ top: window.innerHeight / 3, behavior: "smooth" });
   const playerChoice = e.target.id;
   const compChoice = getCompChoice();
   const winner = getWinner(playerChoice, compChoice);
