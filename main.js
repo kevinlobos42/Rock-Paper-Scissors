@@ -10,6 +10,11 @@ const scores = {
 };
 
 function play(e) {
+  document.body.scrollTo({
+    x: 0,
+    y: 0,
+    behavior: "smooth"
+  });
   const playerChoice = e.target.id;
   const compChoice = getCompChoice();
   const winner = getWinner(playerChoice, compChoice);

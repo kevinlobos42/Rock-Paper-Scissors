@@ -135,6 +135,12 @@ header .scores {
   .container {
     max-width: 320px;
   }
+  .game-icons {
+    flex-direction: column;
+  }
+  .game-icons .choice {
+    margin: 1rem;
+  }
   .icon {
     font-size: 6rem;
   }
